@@ -210,11 +210,17 @@ Configuracion incluida:
 
 Pasos:
 
-1. Subir el proyecto al repositorio:
+1. Subir el proyecto al repositorio. Si estas trabajando en la rama actual `master`:
 
 ```bash
 git add .
 git commit -m "Initial LF Clinic website"
+git push -u origin master
+```
+
+Si prefieres renombrar la rama a `main`:
+
+```bash
 git branch -M main
 git push -u origin main
 ```
