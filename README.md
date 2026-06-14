@@ -24,10 +24,10 @@ https://github.com/p0lixs/lfclinic.git
 
 ```text
 lfclinic/
-+-- public/
-|   +-- laura-fuentes.png
-|   +-- lf-logo.png
 +-- src/
+|   +-- assets/
+|   |   +-- laura-fuentes.png
+|   |   +-- lf-logo.png
 |   +-- App.css
 |   +-- App.jsx
 |   +-- main.jsx
@@ -138,16 +138,16 @@ La direccion visual usa:
 
 ## Activos
 
-Los activos principales estan en `public/`:
+Los activos principales estan en `src/assets/`:
 
-- `public/lf-logo.png`: logo de LF Clinic.
-- `public/laura-fuentes.png`: imagen principal de Laura Fuentes.
+- `src/assets/lf-logo.png`: logo de LF Clinic.
+- `src/assets/laura-fuentes.png`: imagen principal de Laura Fuentes.
 
-Al estar en `public/`, se referencian desde React con rutas absolutas:
+Se importan desde React para que Vite genere rutas correctas tanto en local como en GitHub Pages:
 
 ```jsx
-<img src="/lf-logo.png" alt="LF Clinic" />
-<img src="/laura-fuentes.png" alt="Laura Fuentes en LF Clinic" />
+import lauraPhotoUrl from "./assets/laura-fuentes.png";
+import logoUrl from "./assets/lf-logo.png";
 ```
 
 ## Datos de contacto usados en la web
@@ -177,7 +177,7 @@ src/App.css
 Para cambiar imagenes o logo:
 
 ```text
-public/
+src/assets/
 ```
 
 Mantener los nombres de archivo actuales evita tener que cambiar las rutas en el codigo.

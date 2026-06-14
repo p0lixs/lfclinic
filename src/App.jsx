@@ -15,6 +15,8 @@ import {
   X,
 } from "lucide-react";
 import { useState } from "react";
+import lauraPhotoUrl from "./assets/laura-fuentes.png";
+import logoUrl from "./assets/lf-logo.png";
 
 const whatsappUrl =
   "https://wa.me/34628843013?text=Hola%20LF%20Clinic%2C%20quiero%20reservar%20una%20cita.";
@@ -118,7 +120,7 @@ function Header() {
   return (
     <header className="site-header">
       <a className="brand" href="#inicio" aria-label="LF Clinic inicio">
-        <img className="brand-logo" src="/lf-logo.png" alt="" />
+        <img className="brand-logo" src={logoUrl} alt="" />
         <span>
           <strong>LF Clinic</strong>
           <small>Pamplona</small>
@@ -185,8 +187,8 @@ function App() {
             </div>
 
             <div className="hero-visual" aria-label="Laura Fuentes en LF Clinic">
-              <img className="hero-photo" src="/laura-fuentes.png" alt="" />
-              <img className="hero-watermark" src="/lf-logo.png" alt="" />
+              <img className="hero-photo" src={lauraPhotoUrl} alt="" />
+              <img className="hero-watermark" src={logoUrl} alt="" />
               <div className="hero-proof">
                 <span>Enfermeria estetica</span>
                 <strong>Valoracion personalizada</strong>
@@ -333,7 +335,7 @@ function App() {
       </main>
 
       <footer>
-        <img src="/lf-logo.png" alt="LF Clinic" />
+        <img src={logoUrl} alt="LF Clinic" />
         <span>Centro de enfermeria y medicina estetica en Pamplona</span>
       </footer>
     </>
