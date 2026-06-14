@@ -199,6 +199,48 @@ Build command: npm run build
 Output directory: dist
 ```
 
+## Despliegue en GitHub Pages
+
+El proyecto esta preparado para publicarse en GitHub Pages mediante GitHub Actions.
+
+Configuracion incluida:
+
+- `vite.config.js` define `base: "/lfclinic/"`, necesario para que los assets carguen bien en `https://p0lixs.github.io/lfclinic/`.
+- `.github/workflows/deploy.yml` instala dependencias, ejecuta `npm run build` y publica la carpeta `dist/` en GitHub Pages.
+
+Pasos:
+
+1. Subir el proyecto al repositorio:
+
+```bash
+git add .
+git commit -m "Initial LF Clinic website"
+git branch -M main
+git push -u origin main
+```
+
+2. En GitHub, entrar en el repositorio `p0lixs/lfclinic`.
+
+3. Ir a:
+
+```text
+Settings > Pages
+```
+
+4. En `Build and deployment`, seleccionar:
+
+```text
+Source: GitHub Actions
+```
+
+5. Ir a la pestana `Actions` y comprobar que el workflow `Deploy to GitHub Pages` termina correctamente.
+
+6. La web quedara disponible en:
+
+```text
+https://p0lixs.github.io/lfclinic/
+```
+
 ## Git
 
 Inicializar y conectar con el remoto:
